@@ -1,0 +1,32 @@
+name: Run Rest Assured Tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+  jobs:
+    run-tests:
+      runs-on: windows-latest
+
+      steps:
+
+        - name: clone repositorio
+          uses: actions/checkout@v5
+
+        - name: Set Up Java
+          uses: actions/setup-java@v4
+          with:
+            distribution: "temurin"
+            java-version: "24"
+
+        - name: Set Up Maven
+          run: |
+            mvn --version
+
+        - name: Build and Run Tests
+          run: |
+            mvn -Dtest=teste test
