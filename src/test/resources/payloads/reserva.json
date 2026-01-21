@@ -1,0 +1,11 @@
+{
+  "firstname" : "Bruno",
+  "lastname" : "Nathan",
+  "totalprice" : 3.500,
+  "depositpaid" : true,
+  "bookingdates" : {
+    "checkin" : "2026-01-21",
+    "checkout" : "2026-01-28"
+  },
+  "additionalneeds" : "Quero uma pizza de frango"
+}
